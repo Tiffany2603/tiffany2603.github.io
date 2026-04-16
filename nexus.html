@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>NEXUS - Ziyi Yuan</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page-layer">
+    <a class="detail-back" href="installation-works.html">← Back</a>
+
+    <section class="detail-video">
+      <iframe
+        src="https://www.youtube.com/embed/HIs6Eoi1hgk?autoplay=1&mute=1&loop=1&controls=0&playlist=HIs6Eoi1hgk"
+        title="NEXUS video"
+        allow="autoplay; encrypted-media; picture-in-picture"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+      <h1 class="detail-video-title">NEXUS</h1>
+    </section>
+
+    <section class="detail-desc nexus-detail-desc">
+      <h2 class="detail-desc-title">NEXUS</h2>
+      <p class="detail-desc-text">
+        "NEXUS" is an installation project centered on connection, signal exchange, and the unstable boundary between individual presence and shared systems. The work approaches interaction as a networked condition: bodies, interfaces, and media continuously affect one another rather than acting in isolation. Through spatial composition and responsive visual output, the project turns the exhibition space into a field of linked behavior, where each action becomes part of a larger relational structure.
+      </p>
+    </section>
+
+    <section class="process-section nexus-process-section">
+      <p class="process-section-header">// PROCESS</p>
+
+      <div class="process-grid nexus-process-grid">
+        <div class="process-item">
+          <img class="process-media" src="assets/images/nexus/process_1.png" alt="NEXUS process 1">
+          <div class="process-caption">
+            The installation is integrated into a unified structural frame consisting of a horizontal linear rail with a sliding potentiometer, a digital display interface, and a dual-channel sphere dispenser. An Arduino microcontroller acts as the hardware abstraction layer, capturing analog signals from the slider and interfacing with Unity via serial communication to bridge physical movement with the virtual environment.
+          </div>
+        </div>
+
+        <div class="process-item">
+          <img class="process-media" src="assets/images/nexus/process_2.png" alt="NEXUS process 2">
+          <div class="process-caption">
+            The participant's manual displacement of the slider is translated into the X-axis movement of a digital "seed" sphere. Within the Unity engine, a collision and color-sampling logic is implemented: when the controlled sphere interacts with black elements on screen, its grayscale value is dynamically modulated. This process digitizes the physical force of the user into a persistent visual variable.
+          </div>
+        </div>
+
+        <div class="process-item">
+          <img class="process-media" src="assets/images/nexus/process_3.png" alt="NEXUS process 3">
+          <div class="process-caption">
+            Upon the digital sphere's exit into the hole at the bottom, the system performs a logic arbitration based on its final grayscale intensity. A command is sent to the servo-driven mechanical gate, which triggers the release of a corresponding physical sphere (black or white) from the internal storage. This stage completes the loop by materializing a digital outcome back into a tangible physical form.
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="glitch-bg.js"></script>
+</body>
+</html>

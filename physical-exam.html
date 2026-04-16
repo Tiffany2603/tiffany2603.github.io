@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Dingfuzhuang Private Medical Examination Center - Ziyi Yuan</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page-layer">
+    <a class="detail-back" href="installation-works.html">← Back</a>
+
+    <section class="detail-video">
+      <iframe
+        src="https://www.youtube.com/embed/6L28Tyyo2Yw?autoplay=1&mute=1&loop=1&controls=0&playlist=6L28Tyyo2Yw"
+        title="Dingfuzhuang Private Medical Examination Center video"
+        allow="autoplay; encrypted-media; picture-in-picture"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+      <h1 class="detail-video-title">Dingfuzhuang Private<br>Medical Examination Center</h1>
+    </section>
+
+    <section class="detail-desc">
+      <h2 class="detail-desc-title">Dingfuzhuang Private Medical Examination Center</h2>
+      <p class="detail-desc-text">
+        Through simulating the interactive workflow of clinical physical examinations, Dingfuzhuang Private Medical Examination Center explores the intervention and reshaping of human emotions by technical logic. The project utilizes real-time interactive programming and data visualization to transform contemporary psychological phenomena such as "Fa Feng Wen Xue" (Crazy Literature) into sensory experiences. Under systematic interactive guidance, the audience undergoes a process from being observed and defined to a final emotional breakthrough. The installation not only creates a cold sense of order through TouchDesigner and real-time generative visuals, but also uses this virtual "diagnosis" to conduct a deep physical examination of the mental anxiety and self-identity of modern urbanites.
+      </p>
+
+      <div class="screenshots-grid">
+        <img src="assets/images/physical_exam/content_01.jpg" alt="Physical Exam screenshot 1">
+        <img src="assets/images/physical_exam/content_02.png" alt="Physical Exam screenshot 2">
+        <figure class="content-card">
+          <img src="assets/images/physical_exam/content_03.jpg" alt="Physical Exam screenshot 3">
+          <figcaption class="content-card-copy">The system diagnoses participants with fictional, satirically clinical conditions such as "Occupational Kinetic Deficiency," reflecting the alienation of the individual within modern social structures.</figcaption>
+        </figure>
+        <figure class="content-card">
+          <img src="assets/images/physical_exam/content_04.jpg" alt="Physical Exam screenshot 4">
+          <figcaption class="content-card-copy">Subsequently, the page redirects to the physical examination report, presenting non-existent diagnostic indicators such as Somnoplatelets(SLP), Socio-pathic Cells(SPC), and Psychotic Protein(PPR).</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="process-section physical-exam-process">
+      <p class="process-section-header">// PROCESS</p>
+
+      <div class="process-grid">
+        <div class="process-item">
+          <img class="process-media" src="assets/images/physical_exam/process_01.png" alt="Physical Exam process 1">
+          <div class="process-caption">
+            The main visual uses Kinect to capture color point cloud coordinates, utilizing instancing to map wireframe box geometries to each point. For the background, a Threshold TOP adjusts the captured portrait's threshold, which is then converted into geometry via a Trace CHOP and rendered with wireframe materials to create real-time line effects.
+          </div>
+        </div>
+
+        <div class="process-item">
+          <img class="process-media" src="assets/images/physical_exam/process_02.png" alt="Physical Exam process 2">
+          <div class="process-caption">
+            The system uses a Circle TOP bound to hand coordinates as an interactive cursor. The trigger zone is defined by a Crop TOP and an Analyze TOP (Maximum Pixel mode); when the cursor enters this zone, a TopToCHOP converts the pixel presence into a value of 1, which is then processed by Logic and Trigger CHOPs to control trigger intervals and duration.
+            <br><br>
+            The interaction toggle is implemented by mapping Kinect grip data to the cursor's Level TOP opacity: when the hand is open, the opacity drops to 0, making the cursor invisible to the Analyze TOP and silencing the output signal; otherwise, the trigger remains functional.
+          </div>
+        </div>
+
+        <div class="process-item">
+          <img class="process-media" src="assets/images/physical_exam/process_03.png" alt="Physical Exam process 3">
+          <div class="process-caption">
+Regarding the visual effects of image tracking, the core logic uses a Blob Track TOP to analyze the differences between the current frame and the previous frame to extract variance data. These values are then visualized through instancing, where they are either assigned wireframe materials or mapped to display the live video feed.          </div>
+        </div>
+
+        <div class="process-item">
+          <img class="process-media" src="assets/images/physical_exam/process_04.png" alt="Physical Exam process 4">
+          <div class="process-caption">
+Python scripts are primarily used to bridge the connection between TouchDesigner and the printer for real-time printing. In TouchDesigner, a Movie File Out TOP generates and saves images into a local folder. A Watchdog script monitors this directory; whenever a new image file is detected, it automatically commands the printer to execute a print job.          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="glitch-bg.js"></script>
+</body>
+</html>
