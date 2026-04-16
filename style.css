@@ -596,6 +596,12 @@ a.board-card-title-tile .board-card-title-label {
   height: 100%;
 }
 
+.detail-video-link {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
 .detail-video iframe {
   border: 0;
   pointer-events: none;
@@ -624,6 +630,12 @@ a.board-card-title-tile .board-card-title-label {
   font-weight: 400;
   letter-spacing: -0.04em;
   z-index: 2;
+}
+
+.detail-video-title-link,
+.detail-title-link {
+  color: inherit;
+  text-decoration: none;
 }
 
 .detail-desc {
